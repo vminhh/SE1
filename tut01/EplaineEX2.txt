@@ -1,0 +1,2 @@
+Counter2 is not a legitimate subtype of Counter beacause it violates the subtitiuation principle.
+The incr() method in Counter2 double the count instead of incrementing it by 1, leading to errors and inconsistencies in code.
