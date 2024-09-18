@@ -1,21 +1,18 @@
-package tut03;
+package tut03.modified_textbook;
 
 import java.util.ArrayList;
-import java.util.List;
 
-public class First10Primes {
+public class PrimeList extends ArrayList<Integer> {
     public static void main(String[] args) {
-        List<Integer> primes = new ArrayList<>();
-        int n = 2;
+        PrimeList primes = new PrimeList(10);
+        System.out.println(primes);
+    }
 
-        do {
-            if (isPrime(n)) {
-                primes.add(n);
-            }
-            n++;
-        } while (primes.size() < 10);
-
-        primes.forEach(System.out::println);
+    public PrimeList(int n) {
+        for (int i = 2; this.size() < n; i++) {
+            if (isPrime(i))
+                this.add(i);
+        }
     }
 
     private static boolean isPrime(int n) {
@@ -27,7 +24,7 @@ public class First10Primes {
 
         if (n % 2 == 0 || n % 3 == 0)
             return false;
-            
+
         for (int i = 5; i * i <= n; i += 6) {
             if (n % i == 0 || n % (i + 2) == 0)
                 return false;
