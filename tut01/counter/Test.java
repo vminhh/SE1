@@ -1,6 +1,6 @@
-package tut01;
+package tut01.counter;
 
-public class CounterTest {
+public class Test {
     public static void main(String[] args) {
         Counter cnt = new Counter();
 

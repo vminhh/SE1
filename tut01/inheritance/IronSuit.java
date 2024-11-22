@@ -1,4 +1,4 @@
-package tut01;
+package tut01.inheritance;
 
 public class IronSuit extends Vehicle {
     private double maxFlightSpeed;
@@ -10,20 +10,20 @@ public class IronSuit extends Vehicle {
 
     public void fly(String pointA, String pointB, double distance) {
         System.out.println("Flying from " + pointA + " to " + pointB + ", Distance: " + distance + " km");
-        int millisPerDot = 500;
+
         System.out.print(pointA + " ");
         for (int i = 0; i < 10; i++) {
             try {
-                Thread.sleep(millisPerDot);
-            } catch (InterruptedException e) {
+                Thread.sleep(500);
+                System.out.print(".");
+            } catch (InterruptedException _) {
             }
-            System.out.print(".");
         }
         System.out.println(" " + pointB);
     }
 
     public double getMaxFlightSpeed() {
-        return maxFlightSpeed;
+        return this.maxFlightSpeed;
     }
 
     public void setMaxFlightSpeed(double maxFlightSpeed) {

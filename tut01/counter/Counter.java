@@ -1,4 +1,4 @@
-package tut01;
+package tut01.counter;
 
 public class Counter {
     int count;

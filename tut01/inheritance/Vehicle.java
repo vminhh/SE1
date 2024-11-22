@@ -1,13 +1,12 @@
-package tut01;
+package tut01.inheritance;
 
 public class Vehicle {
-    protected String name;
-    protected double width, height, length, weight;
-    protected int seatingCapacity;
-    protected String registrationNumber;
+    private String name;
+    private double width, height, length, weight;
+    private int seatingCapacity;
+    private String registrationNumber;
 
-    public Vehicle(String name, double width, double height, double length, double weight, int seatingCapacity,
-            String registrationNumber) {
+    public Vehicle(String name, double width, double height, double length, double weight, int seatingCapacity, String registrationNumber) {
         this.name = name;
         this.width = width;
         this.height = height;
@@ -18,7 +17,7 @@ public class Vehicle {
     }
 
     public String getName() {
-        return name;
+        return this.name;
     }
 
     public void setName(String name) {
@@ -26,7 +25,7 @@ public class Vehicle {
     }
 
     public double getWidth() {
-        return width;
+        return this.width;
     }
 
     public void setWidth(double width) {
@@ -34,7 +33,7 @@ public class Vehicle {
     }
 
     public double getHeight() {
-        return height;
+        return this.height;
     }
 
     public void setHeight(double height) {
@@ -42,7 +41,7 @@ public class Vehicle {
     }
 
     public double getLength() {
-        return length;
+        return this.length;
     }
 
     public void setLength(double length) {
@@ -50,7 +49,7 @@ public class Vehicle {
     }
 
     public double getWeight() {
-        return weight;
+        return this.weight;
     }
 
     public void setWeight(double weight) {
@@ -58,7 +57,7 @@ public class Vehicle {
     }
 
     public int getSeatingCapacity() {
-        return seatingCapacity;
+        return this.seatingCapacity;
     }
 
     public void setSeatingCapacity(int seatingCapacity) {
@@ -66,7 +65,7 @@ public class Vehicle {
     }
 
     public String getRegistrationNumber() {
-        return registrationNumber;
+        return this.registrationNumber;
     }
 
     public void setRegistrationNumber(String registrationNumber) {
@@ -75,13 +74,6 @@ public class Vehicle {
 
     @Override
     public String toString() {
-        return "Class: " + this.getClass().getSimpleName() +
-                ", Name: " + name +
-                ", Width: " + width +
-                ", Height: " + height +
-                ", Length: " + length +
-                ", Weight: " + weight +
-                ", Seating Capacity: " + seatingCapacity +
-                ", Registration Number: " + registrationNumber;
+        return "Class: " + this.getClass().getSimpleName() + ", Name: " + this.name + ", Width: " + this.width + ", Height: " + this.height + ", Length: " + this.length + ", Weight: " + this.weight + ", Seating Capacity: " + this.seatingCapacity + ", Registration Number: " + this.registrationNumber;
     }
 }
